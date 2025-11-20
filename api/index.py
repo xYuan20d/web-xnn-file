@@ -1,7 +1,10 @@
 from flask import Flask, send_from_directory, abort
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+CORS(app)
+
 
 # 设置你想要的文件目录 (可以是当前目录或者其他目录)
 BASE_DIRECTORY = os.getcwd()
